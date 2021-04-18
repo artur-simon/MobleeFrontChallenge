@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+#nescss > .container {
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+section.showcase {
+    margin-top: 2.5rem;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  border-bottom: 4px solid #D3D3D3;
+  background-color: white;
+}
+
+header > .container {
+  display: flex;
+  align-items: baseline;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+header > .container > .nav-brand {
+  margin-right: auto;
+}
+header > .container > .social-button {
+  margin-left: auto;
+}
+
+.nav-brand .brand-logo {
+  margin-right: 1rem;
+}
+.nav-brand > a {
+  color: #212529;
+  text-decoration: none;
+}
+
+.social-buttons p {
+  margin-bottom: 0;
+}
+
+body{
+  padding: 0 2rem;
+  margin: 0 2rem;
+}
+
+h1{
+  text-align: center;
+  margin-top: 2em;
+  font-weight: normal;
+}
+
+table{
+  margin:auto;
+  margin-top: 2em;
+}
+
+img{
+  width: 3.5em;
+  height: 3.5em;
+  background: rgb(220,220,220);
+  object-fit: contain;
+}
+
+th, td{
+  padding: 0.75em 2em;
+}
+
+tr:nth-child(even){
+    background-color: rgb(235,235,235);
+}
+
+tr:nth-child(odd){
+    background-color: white;
+}
+
+th{
+    font-size: 1.25em;
+}
+
+a{
+  text-decoration: none;
+  position: relative;
+}
+
+a:after{
+  position: absolute;
+  content: "▼";
+  font-size: 0.6em;
+  right: -1.25em;
+  top: 0.4em;
+}
+
+a.is-selected{
+  color: rgb(60,60,60);
+}
+
+a.is-selected:after{
+  display:none;
+}
+
+/* Main */
+.main-content {
+  margin-bottom: 4rem;
+}
+.topic {
+  margin-bottom: 3rem;
+}
+
+h3.topic-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.item {
+  margin-bottom: -1rem;
+}
+.item > * {
+  margin-bottom: 1.5rem !important;
+}
+.topic {
+    margin-bottom: 3rem;
+}
+
+.nes-container.member-card {
+    display: flex;
+    padding: 1rem 1.5rem;
+    width: 470px;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.member-card .avatar > img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
