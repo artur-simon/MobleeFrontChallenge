@@ -56,8 +56,8 @@ body{
 
 h1{
   text-align: center;
-  margin-top: 2em;
   font-weight: normal;
+  font-size: 2.5em;
 }
 
 table{
@@ -68,7 +68,7 @@ table{
 img{
   width: 7em;
   height: 7em;
-  background: rgb(220,220,220);
+  background: rgb(245 245 245);
   object-fit: contain;
   border-radius: 50% 
 }
@@ -147,8 +147,8 @@ h3.topic-title {
 .member-card .avatar > img {
     display: block;
     margin:auto;
-    width: 10em;
-    height: 10em;
+    width: 8em;
+    height: 8em;
 }
 
 .tablesorter-headerRow > th{
