@@ -66,10 +66,11 @@ table{
 }
 
 img{
-  width: 3.5em;
-  height: 3.5em;
+  width: 7em;
+  height: 7em;
   background: rgb(220,220,220);
   object-fit: contain;
+  border-radius: 50% 
 }
 
 th, td{
@@ -136,15 +137,26 @@ h3.topic-title {
 .nes-container.member-card {
     display: flex;
     padding: 1rem 1.5rem;
-    width: 470px;
+    width: 600px;
     margin-bottom: 2rem;
     margin-right: auto;
     margin-left: auto;
+    align-items: center;
 }
 
 .member-card .avatar > img {
     display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    margin:auto;
+    width: 10em;
+    height: 10em;
+}
+
+.tablesorter-headerRow > th{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.profile
+{
+    margin: 40px;
 }
