@@ -30,14 +30,14 @@
                 <img data-src="trainer.png" alt="Artur Simon" class="" src="trainer.png">
               </div>
               <div class="profile">
-                <h2 class="name">A tabela Pokémon</h2><h4> - por Artur Simon</h4>
+                <h2 class="name">Pokédex </h2><h4> - por Artur Simon</h4>
                 <p>Desafio para a vaga de desenvolvimento front na empresa mobLee.</p>
               </div>
             </section>
           </section>
           <section class="showcase">
             <section class="nes-container with-title">
-              <h3 class="title">A tabela Pokémon</h3>
+              <h3 class="title">Pokédex</h3>
               <div id="tables" class="item">
                 <div class="nes-table-responsive">
                   <table id="pokedex" class="nes-table is-centered is-bordered" style="margin: 4px auto 4px auto;">
