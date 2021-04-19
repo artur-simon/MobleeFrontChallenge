@@ -8,9 +8,9 @@
   <meta name="Artur" content="mobLee">
   <meta name="theme-color" content="#ed1164">
   <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet">
+  <link href="/static/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"/></script>
-  <script src="jquery.tablesorter.min.js"></script>
+  <script src="/static/jquery.tablesorter.min.js"></script>
   <script type="text/javascript">//usa jquery pra ordenar tabelas, rápido e fácil
     $(document).ready(function(){//espera a pagina carregar para chamar
       $("#pokedex").tablesorter();
@@ -27,7 +27,7 @@
           <section class="showcase">
             <section class="nes-container is-dark member-card">
               <div class="avatar">
-                <img data-src="trainer.png" alt="Artur Simon" class="" src="trainer.png">
+                <img data-src="/static/trainer.png" alt="Artur Simon" class="" src="/static/trainer.png">
               </div>
               <div class="profile">
                 <h2 class="name">Pokédex </h2><h4> - por Artur Simon</h4>
