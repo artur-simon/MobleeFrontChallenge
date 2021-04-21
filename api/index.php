@@ -8,9 +8,9 @@
   <meta name="Artur" content="mobLee">
   <meta name="theme-color" content="#ed1164">
   <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet">
+  <link href="/static/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"/></script>
-  <script src="jquery.tablesorter.min.js"></script>
+  <script src="/static/jquery.tablesorter.min.js"></script>
   <script type="text/javascript">//usa jquery pra ordenar tabelas, rápido e fácil
     $(document).ready(function(){//espera a pagina carregar para chamar
       $("#pokedex").tablesorter();
@@ -27,10 +27,10 @@
           <section class="showcase">
             <section class="nes-container is-dark member-card">
               <div class="avatar">
-                <img data-src="trainer.png" alt="Artur Simon" class="" src="trainer.png">
+                <img data-src="/static/trainer.png" alt="Artur Simon" class="" src="/static/trainer.png">
               </div>
               <div class="profile">
-                <h2 class="name">Pokédex </h2><h4> - por Artur Simon</h4>
+                <h1 class="name">Pokédex </h1><h4> - por Artur Simon</h4>
                 <p>Desafio para a vaga de desenvolvimento front na empresa mobLee.</p>
               </div>
             </section>
@@ -53,7 +53,7 @@
                       <?php
                         $url = 'https://pokeapi.co/api/v2/pokemon/';//endereço base da api
                         $index = 1;
-                        while($index < 10) {//O desafio especifica 9 dos pokemons, logo criamos o laço que corre até a décima iteração, acessando a pokeapi e os dados dos pokemons, convertemos o json em objeto e acessamos suas propriedades para printar a tabela com as devidas conversões.
+                        while($index < 152) {//O desafio especifica 9 dos pokemons, logo criamos o laço que corre até a décima iteração, acessando a pokeapi e os dados dos pokemons, convertemos o json em objeto e acessamos suas propriedades para printar a tabela com as devidas conversões.
                           $pokeData = file_get_contents($url.$index); //armazenamos os dados recebidos através da requisição feita à api, utilizando a url mais o número do pokemon
                           $pokemon = json_decode($pokeData); //dados sao devidadmente convertidos de json para um objeto que podemos acessar
                           $tipos = $pokemon->types; //type, diferente das outras propriedades, é um array de tamanho variável, implementamos um laço para adicionar todos
