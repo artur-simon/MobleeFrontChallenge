@@ -55,7 +55,7 @@
                         use PokeAPI\Client;
                         $client = new Client();
                         $index = 1;
-                        while($index <= 152) {
+                        while($index <= 151) {
                           @$species = $client->pokemon($index);
                           $tipos = $species->getTypes();
                           $pokeTipos = "";
@@ -63,7 +63,7 @@
                             $pokeTipos .= ucfirst($t->getType()->getName()).", ";
                           $pokeTipos = substr($pokeTipos, 0, -2);
                           echo "<tr>"
-                              ."<td><img src=".$species->getSprites()['front_default']." alt=".$species->getName()."></td>"
+                              ."<td><img src=".$species->getSprites()['front_default']." loading='lazy' alt=".$species->getName()."></td>"
                               ."<td><strong>".ucfirst($species->getName())."</strong></td>"
                               ."<td><span>".($species->getHeight()/10)."</span>m</td>"
                               ."<td><span>".($species->getWeight()/10)."</span>Kg</td>"
