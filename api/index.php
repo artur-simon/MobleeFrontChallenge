@@ -51,24 +51,24 @@
                     </thead>
                     <tbody>
                       <?php
-                        $url = 'https://pokeapi.co/api/v2/pokemon/';//endereço base da api
+                      require '..\vendor\autoload.php';
+                        use PokeAPI\Client;
+                        $client = new Client();
                         $index = 1;
-                        while($index < 152) {//O desafio especifica 9 dos pokemons, logo criamos o laço que corre até a décima iteração, acessando a pokeapi e os dados dos pokemons, convertemos o json em objeto e acessamos suas propriedades para printar a tabela com as devidas conversões.
-                          $pokeData = file_get_contents($url.$index); //armazenamos os dados recebidos através da requisição feita à api, utilizando a url mais o número do pokemon
-                          $pokemon = json_decode($pokeData); //dados sao devidadmente convertidos de json para um objeto que podemos acessar
-                          $tipos = $pokemon->types; //type, diferente das outras propriedades, é um array de tamanho variável, implementamos um laço para adicionar todos
-                          $pokeTipo = ""; //iniciamos vazio
+                        while($index <= 151) {
+                          @$species = $client->pokemon($index);
+                          $tipos = $species->getTypes();
+                          $pokeTipos = "";
                           foreach ($tipos as $t)
-                            $pokeTipo .= ucfirst($t->type->name).", "; //concatenamos o tipo com a primeira letra em caixa alta, adicionamos vírgula e espaço.
-                          $pokeTipo = substr($pokeTipo, 0, -2);//removemos a ultima vírgula ao final do laço
-                          /*Imprimimos por fim toda a linha da tabela com as informações coletadas da api; em html*/
+                            $pokeTipos .= ucfirst($t->getType()->getName()).", ";
+                          $pokeTipos = substr($pokeTipos, 0, -2);
                           echo "<tr>"
-                          ."<td><img src=".$pokemon->sprites->front_default." alt=".$pokemon->name."></td>"
-                          ."<td><strong>".ucfirst($pokemon->name)."</strong></td>"
-                          ."<td><span>".($pokemon->height/10)."</span>m</td>"
-                          ."<td><span>".($pokemon->weight/10)."</span>Kg</td>"
-                          ."<td>".$pokeTipo."</td>"
-                          ."</tr>";
+                              ."<td><img src=".$species->getSprites()['front_default']." loading='lazy' alt=".$species->getName()."></td>"
+                              ."<td><strong>".ucfirst($species->getName())."</strong></td>"
+                              ."<td><span>".($species->getHeight()/10)."</span>m</td>"
+                              ."<td><span>".($species->getWeight()/10)."</span>Kg</td>"
+                              ."<td>".$pokeTipos."</td>"
+                              ."</tr>";
                           $index++;
                         }?>
                     </tbody>
