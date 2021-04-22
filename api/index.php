@@ -51,7 +51,7 @@
                     </thead>
                     <tbody>
                       <?php
-                      require '..\vendor\autoload.php';
+                      require '..\static\vendor\autoload.php';
                         use PokeAPI\Client;
                         $client = new Client();
                         $index = 1;
