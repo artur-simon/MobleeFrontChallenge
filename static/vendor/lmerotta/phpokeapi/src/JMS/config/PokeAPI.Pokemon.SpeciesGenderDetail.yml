@@ -1,7 +1,0 @@
-PokeAPI\Pokemon\SpeciesGenderDetail:
-  exclusion_policy: ALL
-  properties:
-    rate:
-      type: integer
-    species:
-      type: PokeProxy<'PokeAPI\Pokemon\Species'>

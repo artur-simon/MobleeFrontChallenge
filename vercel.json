@@ -3,5 +3,8 @@
     "api/index.php": {
       "runtime": "vercel-php@0.4.0"
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index.php" }
+]
 }

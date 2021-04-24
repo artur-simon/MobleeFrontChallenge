@@ -1,7 +1,0 @@
-PokeAPI\Pokemon\EncounterVersionRate:
-  exclusion_policy: ALL
-  properties:
-    rate:
-      type: integer
-    version:
-      type: PokeProxy<'PokeAPI\Pokemon\Version'>
