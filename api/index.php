@@ -9,10 +9,32 @@
   <meta name="theme-color" content="#ed1164">
   <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
   <link href="/static/style.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"/></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="/static/jquery.tablesorter.min.js"></script>
-  <script type="text/javascript">//usa jquery pra ordenar tabelas, rápido e fácil
-    $(document).ready(function(){//espera a pagina carregar para chamar
+  <script type="text/javascript">
+    var load_flag = 1;
+    loadMore(load_flag)
+    function loadMore(start)
+    {
+      $.ajax({
+            url:'get.php',
+            data:'start=' + start,
+            type:'post',
+            success:function(result){
+              $('#lazyTbody').append(result);
+              load_flag += 7;
+            }});
+    }
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(window).scrollTop() >= $(document).height() - $(window).height()){
+          console.log("hit")
+          loadMore(load_flag)
+        }
+      });
+    });
+
+    $(document).ready(function(){
       $("#pokedex").tablesorter();
     }); 
   </script>
@@ -49,28 +71,7 @@
                         <th><a href="#" >Tipo</a></th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <?php
-                      require_once __DIR__ . '/../vendor/autoload.php';
-                        use PokeAPI\Client;
-                        $client = new Client();
-                        $index = 1;
-                        while($index <= 51) {
-                          @$species = $client->pokemon($index);
-                          $tipos = $species->getTypes();
-                          $pokeTipos = "";
-                          foreach ($tipos as $t)
-                            $pokeTipos .= ucfirst($t->getType()->getName()).", ";
-                          $pokeTipos = substr($pokeTipos, 0, -2);
-                          echo "<tr>"
-                              ."<td><img src=".$species->getSprites()['front_default']." loading='lazy' alt=".$species->getName()."></td>"
-                              ."<td><strong>".ucfirst($species->getName())."</strong></td>"
-                              ."<td><span>".($species->getHeight()/10)."</span>m</td>"
-                              ."<td><span>".($species->getWeight()/10)."</span>Kg</td>"
-                              ."<td>".$pokeTipos."</td>"
-                              ."</tr>";
-                          $index++;
-                        }?>
+                    <tbody id="lazyTbody">
                     </tbody>
                   </table>
             </section>
