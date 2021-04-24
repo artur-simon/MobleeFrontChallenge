@@ -7,7 +7,7 @@ if(isset($_POST['start']) && $_POST['start'] > 0)
     $client = new Client();
     $start = $_POST['start'];
     $index = $start;
-    while($index <= $start+6) 
+    while($index <= $start+6 && $index <= 150) 
     {
       @$species = $client->pokemon($index);
       $tipos = $species->getTypes();
