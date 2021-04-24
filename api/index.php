@@ -17,7 +17,7 @@
     function loadMore(start)
     {
       $.ajax({
-            url:'get.php',
+            url:'/api/get.php',
             data:'start=' + start,
             type:'post',
             success:function(result){
@@ -27,8 +27,7 @@
     }
     $(document).ready(function(){
       $(window).scroll(function(){
-        if($(window).scrollTop() >= $(document).height() - $(window).height()){
-          console.log("hit")
+        if($(window).scrollTop() >= $(document).height() - $(window).height() && load_flag <= 150){
           loadMore(load_flag)
         }
       });
