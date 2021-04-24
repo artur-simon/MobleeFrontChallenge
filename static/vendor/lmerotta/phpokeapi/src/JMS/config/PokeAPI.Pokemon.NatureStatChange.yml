@@ -1,7 +1,0 @@
-PokeAPI\Pokemon\NatureStatChange:
-  exclusion_policy: ALL
-  properties:
-    maxChange:
-      type: integer
-    pokeathlonStat:
-      type: PokeProxy<'PokeAPI\Pokemon\PokeathlonStat'>

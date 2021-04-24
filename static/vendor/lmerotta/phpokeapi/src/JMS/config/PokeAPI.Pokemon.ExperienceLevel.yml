@@ -1,7 +1,0 @@
-PokeAPI\Pokemon\ExperienceLevel:
-  exclusion_policy: ALL
-  properties:
-    experience:
-      type: integer
-    level:
-      type: integer

@@ -1,12 +1,5 @@
 {
-    "name": "artur/guinho",
-    "authors": [
-        {
-            "name": "Artur Simon",
-            "email": "artur_simon@hotmail.com"
-        }
-    ],
-    "require": {
-        "lmerotta/phpokeapi": "1.1.5"
-    }
+  "require": {
+    "lmerotta/phpokeapi": "1.1.5"
+  }
 }

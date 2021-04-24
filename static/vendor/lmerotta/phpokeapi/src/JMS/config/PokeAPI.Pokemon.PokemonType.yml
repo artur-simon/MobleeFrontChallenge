@@ -1,7 +1,0 @@
-PokeAPI\Pokemon\PokemonType:
-  exclusion_policy: ALL
-  properties:
-    slot:
-      type: integer
-    type:
-      type: PokeProxy<'PokeAPI\Pokemon\Type'>

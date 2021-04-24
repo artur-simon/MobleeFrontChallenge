@@ -44,18 +44,18 @@
                     <thead>
                       <tr>
                         <th colspan="2" id="nome"><a href="#" class="is-selected">Pokémon</a></th>
-                        <th><a href="#" >Altura</a></th>
+                        <th><a href="#" >Altura</a></th>  
                         <th><a href="#" >Peso</a></th>
                         <th><a href="#" >Tipo</a></th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php
-                      require '..\static\vendor\autoload.php';
+                      require_once __DIR__ . '/../vendor/autoload.php';
                         use PokeAPI\Client;
                         $client = new Client();
                         $index = 1;
-                        while($index <= 151) {
+                        while($index <= 51) {
                           @$species = $client->pokemon($index);
                           $tipos = $species->getTypes();
                           $pokeTipos = "";

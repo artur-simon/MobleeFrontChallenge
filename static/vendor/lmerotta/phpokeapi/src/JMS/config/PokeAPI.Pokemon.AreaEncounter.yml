@@ -1,8 +1,0 @@
-PokeAPI\Pokemon\AreaEncounter:
-  exclusion_policy: ALL
-  properties:
-    area:
-      type: PokeProxy<'PokeAPI\Pokemon\Area'>
-    versionEncounters:
-      type: ArrayCollection<PokeAPI\Pokemon\VersionEncounter>
-
