@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+@font-face {
+  font-family: PokemonSolid;
+  src: url("/static/Pokemon Solid.ttf");
+}
 
 #nescss > .container {
   max-width: 980px;
@@ -7,7 +12,7 @@
 }
 
 section.showcase {
-    margin-top: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 /* Header */
@@ -17,7 +22,7 @@ header {
   left: 0;
   right: 0;
   z-index: 9;
-  border-bottom: 4px solid #D3D3D3;
+  border-bottom: 4px solid #d3d3d3;
   background-color: white;
 }
 
@@ -49,52 +54,55 @@ header > .container > .social-button {
   margin-bottom: 0;
 }
 
-body{
+body {
   padding: 0 2rem;
   margin: 0 2rem;
 }
 
-h1{
+h1 {
+  font-family: PokemonSolid;
+  letter-spacing: 0.05em;
   text-align: center;
   font-weight: normal;
-  font-size: 2.5em;
+  font-size: 4.5em;
 }
 
-table{
-  margin:auto;
+table {
+  margin: auto;
   margin-top: 2em;
 }
 
-img{
+img {
   width: 7em;
   height: 7em;
   background: rgb(245 245 245);
   object-fit: contain;
-  border-radius: 50% 
+  border-radius: 50%;
 }
 
-th, td{
+th,
+td {
   padding: 0.75em 2em;
 }
 
-tr:nth-child(even){
-    background-color: rgb(235,235,235);
+tr:nth-child(even) {
+  background-color: rgb(235, 235, 235);
 }
 
-tr:nth-child(odd){
-    background-color: white;
+tr:nth-child(odd) {
+  background-color: white;
 }
 
-th{
-    font-size: 1.25em;
+th {
+  font-size: 1.25em;
 }
 
-a{
+a {
   text-decoration: none;
   position: relative;
 }
 
-a:after{
+a:after {
   position: absolute;
   content: "▼";
   font-size: 0.6em;
@@ -102,12 +110,12 @@ a:after{
   top: 0.4em;
 }
 
-a.is-selected{
-  color: rgb(60,60,60);
+a.is-selected {
+  color: rgb(60, 60, 60);
 }
 
-a.is-selected:after{
-  display:none;
+a.is-selected:after {
+  display: none;
 }
 
 /* Main */
@@ -131,32 +139,31 @@ h3.topic-title {
   margin-bottom: 1.5rem !important;
 }
 .topic {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .nes-container.member-card {
-    display: flex;
-    padding: 1rem 1.5rem;
-    width: 600px;
-    margin-bottom: 2rem;
-    margin-right: auto;
-    margin-left: auto;
-    align-items: center;
+  display: flex;
+  padding: 1rem 1.5rem;
+  width: 600px;
+  margin-bottom: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
 }
 
 .member-card .avatar > img {
-    display: block;
-    margin:auto;
-    width: 8em;
-    height: 8em;
+  display: block;
+  margin: auto;
+  width: 8em;
+  height: 8em;
 }
 
-.tablesorter-headerRow > th{
-    padding-left: 17px;
-    padding-right: 17px;
+.tablesorter-headerRow > th {
+  padding-left: 17px;
+  padding-right: 17px;
 }
 
-.profile
-{
-    margin: 40px;
+.profile {
+  margin: 40px !important;
 }
